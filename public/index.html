@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <img src="banner.jpg" alt="Student Management System">
+        <h1>Student Management System</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Add New Student</h2>
+            <form id="student-form">
+                <input type="text" id="studentNumber" name="studentNumber" placeholder="Student Number" required>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="radio" id="gender-male" name="gender" value="male"> <label for="gender-male">Male</label>
+                <input type="radio" id="gender-female" name="gender" value="female"> <label for="gender-female">Female</label>
+                <input type="tel" id="contactNumber" name="contactNumber" pattern="^09[0-9]{9}$" maxlength="11" inputmode="numeric" placeholder="09XXXXXXXXX" required>
+                <input type="text" id="address" name="address" placeholder="Address" required>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section class="student-list-section">
+            <h2>
+                <button id="toggle-student-list">Show Student List</button>
+            </h2>
+            <div id="student-list-container" style="display: none;">
+                <table id="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student Number</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Contact Number</th>
+                            <th>Address</th>
+                            <th>Photo</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list">
+                        <!-- Student List will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Student Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

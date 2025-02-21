@@ -1,0 +1,186 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+    min-height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Set a fixed height for the header */
+    background-color: #004080;
+    color: white;
+}
+
+header img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the header */
+    object-fit: cover;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    flex: 1; /* Allow main to grow and take available space */
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #002d5a;
+}
+
+/* Student List */
+.student-list-section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px; /* Increase max-width to accommodate longer inputs */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+#student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto; /* Change to auto to allow flexible column widths */
+}
+
+#student-table th,
+#student-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word; /* Allow text to wrap within cells */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: normal; /* Allow text to wrap */
+}
+
+#student-table th {
+    background-color: #004080;
+    color: white;
+}
+
+#student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#student-table td img {
+    display: block;
+    margin: 0 auto;
+}
+
+#student-table td button {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background: #004080;
+    color: white;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    flex-shrink: 0; /* Ensure footer stays at the bottom */
+}
+
+/* Additional Styles */
+.form-section input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+
+.form-section label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-section input[type="radio"] + label {
+    margin-right: 20px;
+}
+
+.form-section input[type="file"] {
+    padding: 5px;
+}
+
+.form-section button {
+    margin-top: 20px;
+}
+
+.student-list-section table {
+    margin-top: 20px;
+}
+
+.student-list-section th, .student-list-section td {
+    padding: 10px;
+    text-align: left;
+}
+
+.student-list-section th {
+    background-color: #004080;
+    color: white;
+}
+
+.student-list-section tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
